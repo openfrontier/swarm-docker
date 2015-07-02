@@ -2,6 +2,6 @@
 set -e
 
 HOST_IP=$1
-docker run --name $HOSTNAME -p 9999:2375 -d swarm \
+docker run --name swarm -p 9999:2375 -d swarm \
     manage \
-    consul://${HOST_IP}:8500/demo01
+    consul://${HOST_IP}:8500
