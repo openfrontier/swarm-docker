@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker stop $HOSTNAME
-docker rm -v $HOSTNAME
+docker stop swarm
+docker rm -v swarm

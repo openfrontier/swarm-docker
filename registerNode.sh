@@ -2,7 +2,8 @@
 set -e
 
 HOST_IP=$1
-docker run --name $HOSTNAME -d swarm \
+HOST_PORT=$2
+docker run --name swarm -d swarm \
     join \
-    --advertise=${HOST_IP}:2375 \
-    consul://${HOST_IP}:8500/demo01
+    --advertise=${HOST_IP}:${HOST_PORT} \
+    consul://${HOST_IP}:8500
