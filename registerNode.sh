@@ -8,4 +8,4 @@ docker run --name swarm \
     -d swarm \
     join \
     --advertise=${HOST_IP}:${HOST_PORT} \
-    consul://${HOST_IP}:8500
+    etcd://${HOST_IP}:2379

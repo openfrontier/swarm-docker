@@ -7,4 +7,4 @@ docker run --name swarm-master \
     -p 9999:2375 \
     -d swarm \
     manage \
-    consul://${HOST_IP}:8500
+    etcd://${HOST_IP}:2379
